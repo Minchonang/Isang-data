@@ -1,0 +1,89 @@
+/* 안성탕면체 Bold */
+@font-face {
+	font-family: "Ansungtangmyun-Bold";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/Ansungtangmyun-Bold.woff2")
+		format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/* 배민 도현체 */
+@font-face {
+	font-family: "BMDOHYEON";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+/* 배민 주아체 */
+@font-face {
+	font-family: "BMJUA";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+   font-family: 'NanumSquareNeo-Variable';
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+}
+
+.all_area {
+   display: flex;
+   flex-direction: column;
+   margin: 0 30px;
+}
+
+body {
+   background-color: #f6f9fc;
+}
+
+/* 헤더 영역 */
+.header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 30px 0;
+   font-family: "NanumSquareNeo-Variable";
+   font-size: 50px;
+   cursor: default;
+   -webkit-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select: none;
+}
+
+.headline {
+   /* margin: 0 10% 0 10%; */
+   height: 2px;
+   background-color: rgb(189, 189, 189);
+}
+
+.tab_bar_area{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   font-family: "NanumSquareNeo-Variable";
+   font-size: 30px;
+   -webkit-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select: none;
+}
+
+.tab_ecoFriendlyCar, 
+.tab_env {
+   padding: 30px 17%;
+   cursor: pointer;
+}
+
+.tab_ecoFriendlyCar {
+   background-color: rgb(193, 221, 231);
+}
+
+.tab_ecoFriendlyCar:hover,
+.tab_env:hover {
+   background-color: lightblue;
+}
