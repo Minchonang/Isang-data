@@ -1,3 +1,10 @@
+/* 나눔고딕체 */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.nanumgothic * {
+   font-family: 'Nanum Gothic', sans-serif;
+}
+
 /* 나눔스퀘어네오체 */
 @font-face {
    font-family: 'NanumSquareNeo-Variable';
@@ -15,7 +22,8 @@ body {
 .all_area {
    display: flex;
    flex-direction: column;
-   width: 80vw
+   width: 80vw;
+   margin-bottom: 10px;
 }
 
 /* 헤더 영역 */
@@ -26,17 +34,12 @@ body {
    margin: 50px 0;
    font-family: "NanumSquareNeo-Variable", serif;
    font-size: 50px;
+   font-weight: bold;
    cursor: default;
    -webkit-user-select:none;
    -moz-user-select:none;
    -ms-user-select:none;
    user-select: none;
-}
-
-.headline {
-   /* margin: 0 10% 0 10%; */
-   height:           2px;
-   background-color: #bdbdbd;
 }
 
 .tab_bar_area{
@@ -45,7 +48,8 @@ body {
    justify-content:     center;
    align-items:         center;
    font-family:         "NanumSquareNeo-Variable", serif;
-   font-size:           30px;
+   font-size:           22px;
+   font-weight: bold;
    -webkit-user-select: none;
    -moz-user-select:    none;
    -ms-user-select:     none;
@@ -54,29 +58,32 @@ body {
 
 .tab_ecoFriendlyCar,
 .tab_env {
-   width: 10vw;
+   display: flex;
+   justify-content: center;
+   width:            10vw;
    padding:          30px 15vw;
    cursor:           pointer;
-   background-color: #efefef;
-}
-
-.tab_ecoFriendlyCar {
-   /*background-color: #e1e1e1;*/
+   background-color: #e1edf1;
+   color:            #808080;
 }
 
 .tab_ecoFriendlyCar:hover,
 .tab_env:hover {
-   background-color: #c1dde7;
+   background-color: #9bd8ec;
+   color: black;
 }
 
 #tab_selected {
-   background-color: #c1dde7;
+   background-color: #b5dae6;
+   color: black;
 }
 
+/* 그래프, 웹 크롤링 영역 */
 .main_area {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+   display:          flex;
+   flex-direction:   column;
+   align-items:      center;
+   background-color: #f0f0f4;
 }
 
 .img_car {
@@ -90,11 +97,38 @@ body {
    margin-top: 20px;
 }
 
+.graph_area div {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   margin: 1.5% 0;
+}
+
 graph {
    padding: 0 15px;
 }
 
+/* 데이터 분석 영역 */
+description {
+   margin: 2% 3%;
+}
+
+ul {
+   padding-left: 2%;
+}
+
+description ul li, h3 {
+   font-family: "Nanum Gothic", serif;
+}
+
+.ecoFriendlyCar_desc li {
+   font-size: 1.1rem;
+   padding: 5px 0;
+}
+
 .comment_area {
-   margin-top: 25px;
+   margin: 25px 5% 0 5%;
+   background-color: white;
+   width: 100%;
    height: 30vw;
 }
