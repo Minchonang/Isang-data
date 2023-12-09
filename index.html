@@ -15,11 +15,11 @@
 				</div>
 
 				<div class="tab_bar_area">
-					<div id="tab_selected" class="tab_ecoFriendlyCar">
+					<div id="tab_ecoCar" class="tab_common tab_selected" onclick="selectEcoCar()">
 						<div>친환경 자동차</div>
 					</div>
 
-					<div class="tab_env">
+					<div id="tab_env" class="tab_common tab_none" onclick="selectEnv()">
 						<div>환경오염</div>
 					</div>
 				</div>
@@ -27,7 +27,7 @@
 
 <!--			그래프 시각화, 데이터 분석 영역 -->
 			<main class="main_area">
-				<div class="graph_area">
+				<div id="ecoCar_graph" class="show">
 					<div>
 						<graph>
 							<img class="img_car" src="https://minchonang.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fa8f094af-6e08-4df8-9b2b-f7f4eaa9e42d%2Fc986a433-99ce-40cb-abbb-bf2d45c9ac77%2F%25EB%2585%2584%25EB%258F%2584%25EB%25B3%2584_%25EC%2588%2598%25EC%25A7%2588%25EC%25A0%2595%25EB%25B3%25B4.png?table=block&id=75a2f203-89dd-43c3-9c55-808552e050aa&spaceId=a8f094af-6e08-4df8-9b2b-f7f4eaa9e42d&width=1600&userId=&cache=v2" alt="noGraphImg"/>
@@ -55,11 +55,40 @@
 					</description>
 				</div>
 
-				<div class="comment_area">
+				<div id="comment" class="comment_area">
 					<comment>
 						~ 웹 크롤링 영역 ~
 					</comment>
 				</div>
+
+				<div id="env_graph" class="hidden">
+					<div>
+						<graph>
+							<img class="img_car" src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fa8f094af-6e08-4df8-9b2b-f7f4eaa9e42d%2F49b2e126-c51b-48b9-91d4-132b6e39c18c%2FUntitled.png?table=block&id=3e8a12c2-8dd6-42d9-9569-c6827707d74e&spaceId=a8f094af-6e08-4df8-9b2b-f7f4eaa9e42d&width=2000&userId=6519112b-50fc-4c6c-b9e6-174d9c3dbad1&cache=v2" alt="noGraphImg"/>
+						</graph>
+						<graph>
+							<img class="img_car" src="https://minchonang.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fa8f094af-6e08-4df8-9b2b-f7f4eaa9e42d%2Fd0c16e00-c40a-448b-b8ee-20fe5a648f60%2FUntitled.jpeg?table=block&id=0efb54d3-8693-4ae8-9f7f-2d4445158bac&spaceId=a8f094af-6e08-4df8-9b2b-f7f4eaa9e42d&width=670&userId=&cache=v2" alt="noGraphImg"/>
+						</graph>
+					</div>
+
+					<div>
+						<graph>
+							<img class="img_car" src="https://minchonang.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fa8f094af-6e08-4df8-9b2b-f7f4eaa9e42d%2Fc986a433-99ce-40cb-abbb-bf2d45c9ac77%2F%25EB%2585%2584%25EB%258F%2584%25EB%25B3%2584_%25EC%2588%2598%25EC%25A7%2588%25EC%25A0%2595%25EB%25B3%25B4.png?table=block&id=75a2f203-89dd-43c3-9c55-808552e050aa&spaceId=a8f094af-6e08-4df8-9b2b-f7f4eaa9e42d&width=1600&userId=&cache=v2" alt="noGraphImg"/>
+						</graph>
+						<graph>
+							<img class="img_car" src="https://minchonang.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fa8f094af-6e08-4df8-9b2b-f7f4eaa9e42d%2Fc986a433-99ce-40cb-abbb-bf2d45c9ac77%2F%25EB%2585%2584%25EB%258F%2584%25EB%25B3%2584_%25EC%2588%2598%25EC%25A7%2588%25EC%25A0%2595%25EB%25B3%25B4.png?table=block&id=75a2f203-89dd-43c3-9c55-808552e050aa&spaceId=a8f094af-6e08-4df8-9b2b-f7f4eaa9e42d&width=1600&userId=&cache=v2" alt="noGraphImg"/>
+						</graph>
+					</div>
+					<!--					데이터 분석-->
+					<description>
+						<h2>[데이터 분석]</h2>
+						<ul class="ecoFriendlyCar_desc">
+							<li>점진적으로 증가하거나 점진적으로 감소할 것이라는 예상과는 달리 각각의 요소의 변화가 연도에 따라 감소할 때도 증가할 때도 있는 것을 알 수 있었다.</li>
+							<li>수질을 결정하는 평가 요인들은 각각 해당 년도에 기후, 주변 환경 변화 등에 영향을 받아 불규칙적으로 변화한다는 것을 예상할 수 있다.</li>
+						</ul>
+					</description>
+				</div>
+
 			</main>
 		</div>
 	</body>

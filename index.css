@@ -42,13 +42,13 @@ body {
    user-select: none;
 }
 
-.tab_bar_area{
+.tab_bar_area {
    display:             flex;
    flex-direction:      row;
    justify-content:     center;
    align-items:         center;
    font-family:         "NanumSquareNeo-Variable", serif;
-   font-size:           22px;
+   font-size:           18px;
    font-weight: bold;
    -webkit-user-select: none;
    -moz-user-select:    none;
@@ -56,29 +56,43 @@ body {
    user-select:         none;
 }
 
-.tab_ecoFriendlyCar,
-.tab_env {
+.tab_common {
    display: flex;
    justify-content: center;
    width:            10vw;
    padding:          30px 15vw;
-   cursor:           pointer;
-   background-color: #e1edf1;
-   color:            #808080;
 }
-
-.tab_ecoFriendlyCar:hover,
-.tab_env:hover {
+.tab_selected {
+   cursor:           default;
    background-color: #9bd8ec;
    color: black;
 }
-
-#tab_selected {
-   background-color: #b5dae6;
-   color: black;
+.tab_none {
+   cursor:           pointer;
+   background-color: #e1edf1;
+   color: #808080;
+}
+.tab_none:hover {
+   background-color: #b6e0ed;
+}
+.tab_selected div,
+.tab_none div {
+   width: auto;
 }
 
 /* 그래프, 웹 크롤링 영역 */
+.show {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   margin-top: 20px;
+   transition-duration: 1s;
+}
+
+.hidden {
+   display: none;
+}
+
 .main_area {
    display:          flex;
    flex-direction:   column;
@@ -90,14 +104,8 @@ body {
    height: 28vw;
    width: 37vw;
 }
-.graph_area {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   margin-top: 20px;
-}
 
-.graph_area div {
+.show div {
    display: flex;
    flex-direction: row;
    justify-content: space-evenly;
@@ -131,4 +139,5 @@ description ul li, h3 {
    background-color: white;
    width: 100%;
    height: 30vw;
+   transition-duration: 1s;
 }
