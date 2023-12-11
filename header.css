@@ -1,31 +1,3 @@
-/* 나눔고딕체 */
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-
-.nanumgothic * {
-   font-family: 'Nanum Gothic', sans-serif;
-}
-
-/* 나눔스퀘어네오체 */
-@font-face {
-   font-family: 'NanumSquareNeo-Variable';
-   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-   font-weight: normal;
-   font-style: normal;
-}
-
-body {
-   display: flex;
-   justify-content: center;
-   background-color: #f6f9fc;
-}
-
-.all_area {
-   display: flex;
-   flex-direction: column;
-   width: 80vw;
-   margin-bottom: 10px;
-}
-
 /* 헤더 영역 */
 .header {
    display: flex;
@@ -79,4 +51,3 @@ body {
 .tab_none div {
    width: auto;
 }
-

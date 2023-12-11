@@ -1,0 +1,106 @@
+/* 그래프, 웹 크롤링 영역 */
+.show {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   margin-top: 10px;
+   width: 100%;
+
+   animation-name: animation_dataFrame;
+   animation-duration: 0.6s;
+}
+.show div {
+   width: 95%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 10px 0;
+}
+
+.show_dataFrame_area {
+   display: flex;
+   align-items: center;
+   font-size: 16px;
+   padding: 10px 20px;
+   width: 12% !important;
+   background-color: #b6e0ed;
+   border-radius: 50px;
+   cursor: pointer;
+
+   -webkit-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select: none;
+}
+
+.hidden {
+   display: none;
+}
+
+.main_area {
+   display:          flex;
+   flex-direction:   column;
+   align-items:      center;
+   background-color: white;
+}
+
+.img_car {
+   height: 28vw;
+   width: 37vw;
+}
+
+graph, dataframe {
+   width: 100%;
+}
+
+
+/* 데이터 분석 영역 */
+description {
+   margin: 2% 0 10% 0;
+   width: 95%;
+}
+
+ul {
+   padding-left: 2%;
+}
+
+description ul li, h3 {
+   font-family: "Nanum Gothic", serif;
+}
+
+.ecoFriendlyCar_desc li {
+   font-size: 1.1rem;
+   padding: 5px 0;
+}
+
+.comment_area {
+   margin: 25px 5% 0 5%;
+   background-color: white;
+   width: 95%;
+   height: 30vw;
+}
+
+show {
+   color:       #656668;
+   font-family: "NanumSquareNeo-Variable", serif;
+}
+show:hover {
+   color: black;
+   font-weight: bolder;
+}
+
+@keyframes animation_dataFrame {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+#dataFrame1,
+#dataFrame2 {
+   animation-name: animation_dataFrame;
+   animation-duration: 0.6s;
+}
