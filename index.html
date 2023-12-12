@@ -29,6 +29,7 @@
 
 <!--			그래프 시각화, 데이터 분석 영역 -->
 			<main class="main_area">
+<!--				친환경 자동차 -->
 				<div id="ecoCar_graph" class="show">
 					<div>
 						<graph>
@@ -64,24 +65,27 @@
 					</comment>
 				</div>
 
+<!--				재생에너지 -->
 				<div id="env_graph" class="hidden">
+					<h1>전체 발전량</h1>
 					<div>
 						<graph>
 							<iframe
-									name="재생에너지 발전량"
-									src="./html/재생에너지발전량_선그래프.html"
+									name="연도별 수질정보"
+									src="./html/재생에너지/재생에너지_전체_발전량_그래프.html"
 									width="100%"
 									height="600"
 									frameborder="0">
 							</iframe>
 						</graph>
-						<div class="show_dataFrame_area">
-							<show onclick="click_DataFrame('df1')">데이터 프레임 보기</show>
+						<div id="df1_btn" class="show_dataFrame_area"
+							  onclick="click_DataFrame('df1')">
+							<show>데이터 프레임 보기</show>
 						</div>
 						<dataframe id="dataFrame1" class="hidden">
 							<iframe
 									name="전체 발전량"
-									src="./html/재생에너지발전량(데이터).html"
+									src="./html/재생에너지/재생에너지_전체_발전량_데이터프레임.html"
 									width="100%"
 									height="300"
 									frameborder="0">
@@ -89,29 +93,110 @@
 						</dataframe>
 					</div>
 
+					<h1>전체 발전량 백분율</h1>
 					<div>
 						<graph>
 							<iframe
-									name="대기오염 그래프"
-									src="html/대기오염.html"
+									name="재생에너지 발전량"
+									src="./html/재생에너지/재생에너지_전체_발전량_백분율_그래프.html"
 									width="100%"
 									height="600"
 									frameborder="0">
 							</iframe>
 						</graph>
-						<div class="show_dataFrame_area">
-							<show onclick="click_DataFrame('df2')">데이터 프레임 보기</show>
+						<div id="df2_btn" class="show_dataFrame_area"
+							  onclick="click_DataFrame('df2')">
+							<show>데이터 프레임 보기</show>
 						</div>
 						<dataframe id="dataFrame2" class="hidden">
 							<iframe
 									name="전체 발전량"
-									src="./html/재생에너지발전량(데이터).html"
+									src="./html/재생에너지/재생에너지_전체_발전량_백분율_데이터베이스.html"
 									width="100%"
 									height="300"
 									frameborder="0">
 							</iframe>
 						</dataframe>
 					</div>
+
+					<h1>에너지원별 재생에너지 발전량</h1>
+					<div>
+						<graph>
+							<iframe
+									name="에너지원별 재생에너지 발전량"
+									src="html/재생에너지/에너지원별_발전량_그래프.html"
+									width="100%"
+									height="600"
+									frameborder="0">
+							</iframe>
+						</graph>
+						<div id="df3_btn" class="show_dataFrame_area"
+							  onclick="click_DataFrame('df3')">
+							<show>데이터 프레임 보기</show>
+						</div>
+						<dataframe id="dataFrame3" class="hidden">
+							<iframe
+									name="전체 발전량"
+									src="./html/재생에너지/에너지원별_발전량_데이터베이스.html"
+									width="100%"
+									height="300"
+									frameborder="0">
+							</iframe>
+						</dataframe>
+					</div>
+
+					<h1>수질 오염</h1>
+					<div>
+						<graph>
+							<iframe
+									name="수질 오염"
+									src="html/재생에너지/수질오염_그래프.html"
+									width="100%"
+									height="600"
+									frameborder="0">
+							</iframe>
+						</graph>
+						<div id="df4_btn" class="show_dataFrame_area"
+							  onclick="click_DataFrame('df4')">
+							<show>데이터 프레임 보기</show>
+						</div>
+						<dataframe id="dataFrame4" class="hidden">
+							<iframe
+									name="전체 발전량"
+									src="./html/재생에너지/수질오염_데이터베이스.html"
+									width="100%"
+									height="300"
+									frameborder="0">
+							</iframe>
+						</dataframe>
+					</div>
+
+					<h1>대기 오염</h1>
+					<div>
+						<graph>
+							<iframe
+									name="대기 오염"
+									src="html/재생에너지/대기오염_그래프.html"
+									width="100%"
+									height="600"
+									frameborder="0">
+							</iframe>
+						</graph>
+						<div id="df5_btn" class="show_dataFrame_area"
+							  onclick="click_DataFrame('df5')">
+							<show>데이터 프레임 보기</show>
+						</div>
+						<dataframe id="dataFrame5" class="hidden">
+							<iframe
+									name="전체 발전량"
+									src="./html/재생에너지/대기오염_데이터프레임.html"
+									width="100%"
+									height="300"
+									frameborder="0">
+							</iframe>
+						</dataframe>
+					</div>
+
 					<!--					데이터 분석-->
 					<description>
 						<h2>[데이터 분석]</h2>

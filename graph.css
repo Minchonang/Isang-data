@@ -21,8 +21,8 @@
 .show_dataFrame_area {
    display: flex;
    align-items: center;
-   font-size: 16px;
-   padding: 10px 20px;
+   font-size: 15px;
+   padding: 15px 25px;
    width: 12% !important;
    background-color: #b6e0ed;
    border-radius: 50px;
