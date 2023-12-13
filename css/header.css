@@ -41,8 +41,8 @@
 }
 .tab_none {
    cursor:           pointer;
-   background-color: #e1edf1;
-   color: #808080;
+   background-color: #e7edef;
+   color:            #808080;
 }
 .tab_none:hover {
    background-color: #b6e0ed;
