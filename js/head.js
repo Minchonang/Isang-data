@@ -21,7 +21,7 @@ const selectEco = () => {
    comment.classList.replace(HIDDEN, "comment_area");
 };
 
-// 재생에너지 탭
+// 자동차 추천 탭
 const selectEnv = () => {
    env.classList.replace(TAB_NONE, TAB_SELECTED);
    ecoCar.classList.replace(TAB_SELECTED, TAB_NONE);
@@ -29,9 +29,9 @@ const selectEnv = () => {
    ecoCar_graph.classList.replace(SHOW, HIDDEN);
    comment.classList.replace("comment_area", HIDDEN);
    // 그래프 버그로 <iframe> 새로고침을 실행
-   for (let i = 0; i < iframes.length; i++) {
-      iframes[i].src = iframes[i].src;
-   }
+   // for (let i = 0; i < iframes.length; i++) {
+   //    iframes[i].src = iframes[i].src;
+   // }
 };
 
 

@@ -79,6 +79,7 @@
    display:          flex;
    flex-direction:   column;
    align-items:      center;
+   margin-bottom: 30px;
    background-color: rgba(255, 255, 255, 0.54);
 }
 
@@ -86,6 +87,9 @@ graph, dataframe {
    width: 100%;
 }
 
+sub {
+   font-size: smaller;
+}
 
 /* 데이터 분석 영역 */
 description {
@@ -106,11 +110,19 @@ description ul li, h3 {
    padding: 5px 0;
 }
 
+/* 웹 크롤링 */
 .comment_area {
-   margin: 25px 5% 0 5%;
-   background-color: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 25px 5% 30px 5%;
+   /* background-color: white; */
    width: 95%;
    height: 30vw;
+}
+comment {
+   display: flex;
+   flex-direction: row;
 }
 
 /* <show> 태그 */
@@ -123,3 +135,8 @@ show:hover {
    font-weight: bolder;
 }
 
+/* 충전소 지도 -> 데이터프레임 없음 */
+#df_eco5_btn, 
+#df_eco6_btn {
+   display: none;
+}
