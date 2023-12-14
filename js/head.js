@@ -1,7 +1,9 @@
 const TAB_NONE = "tab_none";
 const TAB_SELECTED = "tab_selected";
-const HIDDEN = "hidden";
 const SHOW = "show";
+const HIDDEN = "hidden";
+const FADE_IN = "fade_in";
+const FADE_OUT = "fade_out";
 
 const ecoCar = document.querySelector("#tab_ecoCar");
 const env = document.querySelector("#tab_env");

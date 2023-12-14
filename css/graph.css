@@ -1,4 +1,8 @@
 /* 그래프, 웹 크롤링 영역 */
+.hidden {
+   display: none;
+}
+
 .show {
    display: flex;
    flex-direction: column;
@@ -6,9 +10,17 @@
    align-items: center;
    margin-top: 10px;
    width: 100%;
-
-   animation-name: animation_dataFrame;
-   animation-duration: 0.6s;
+   opacity: 0;
+   transition: 0.3s;
+}
+.show {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   margin-top: 10px;
+   width: 100%;
+   opacity: 1;
 }
 .show div {
    width: 95%;
@@ -34,8 +46,42 @@
    user-select: none;
 }
 
-.hidden {
-   display: none;
+.fade_in {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   margin-top: 10px;
+   width: 100%;
+   opacity: 0;
+}
+/* .fade_in { */
+/*    display: flex; */
+/*    flex-direction: column; */
+/*    justify-content: space-around; */
+/*    align-items: center; */
+/*    margin-top: 10px; */
+/*    width: 100%; */
+/*    opacity: 1; */
+/* } */
+.fade_out {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   margin-top: 10px;
+   width: 100%;
+   opacity: 1;
+   transition: 0.3s;
+}
+.fade_out {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   margin-top: 10px;
+   width: 100%;
+   opacity: 0;
 }
 
 .main_area {
@@ -43,11 +89,6 @@
    flex-direction:   column;
    align-items:      center;
    background-color: white;
-}
-
-.img_car {
-   height: 28vw;
-   width: 37vw;
 }
 
 graph, dataframe {
@@ -81,6 +122,7 @@ description ul li, h3 {
    height: 30vw;
 }
 
+/* <show> 태그 */
 show {
    color:       #656668;
    font-family: "NanumSquareNeo-Variable", serif;
@@ -90,17 +132,3 @@ show:hover {
    font-weight: bolder;
 }
 
-@keyframes animation_dataFrame {
-   from {
-      opacity: 0;
-   }
-   to {
-      opacity: 1;
-   }
-}
-
-#dataFrame1,
-#dataFrame2 {
-   animation-name: animation_dataFrame;
-   animation-duration: 0.6s;
-}

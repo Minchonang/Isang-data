@@ -22,12 +22,18 @@ let bool_dataFrameState = {
 }
 const click_DataFrame = (key) => {
    if (!bool_dataFrameState[key]) {
-      df[key].classList.replace(HIDDEN, SHOW);
       document.querySelector(`${btnMap[key]} > show`).innerText = "데이터 프레임 닫기";
+      df[key].classList.replace(HIDDEN, FADE_IN);
+      setTimeout(function () {
+         df[key].classList.replace(FADE_IN, SHOW);
+      }, 0);
       bool_dataFrameState[key] = true;
    } else if (bool_dataFrameState[key]) {
-      df[key].classList.replace(SHOW, HIDDEN);
       document.querySelector(`${btnMap[key]} > show`).innerText = "데이터 프레임 보기";
+      df[key].classList.replace(SHOW, FADE_OUT);
+      setTimeout(function() {
+         df[key].classList.replace(FADE_OUT, HIDDEN);
+      }, 300);
       bool_dataFrameState[key] = false;
    }
 };
