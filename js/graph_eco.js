@@ -78,6 +78,10 @@ const ecoCarData = [
 ];
 
 // 반복문을 통해 HTML 코드 동적 생성
+// 배열을 받아 html 코드를 반환해야 하므로 map(item, index) 사용.
+// item: 배열의 항목, index: 순서(0 ~ 배열 크기)
+// index 0 ~ 11까지 id=ecoCar_graph 태그 안에 다 들어가야 하는 이어지는 코드이므로 하므로 join("")을 사용하여 </div>로 끝난 코드를 이어붙임.
+
 const ecoCarGraphHTML = ecoCarData
 	.map(
 		(item, index) => `
@@ -117,6 +121,7 @@ const ecoCarGraphHTML = ecoCarData
 const ecoCarGraphElement = document.getElementById("ecoCar_graph");
 ecoCarGraphElement.innerHTML = ecoCarGraphHTML;
 
+// [데이터 프레임 보기] 버튼을 위한 변수 선언
 const df_eco = {
 	df_eco1: document.querySelector("#dataFrame1_eco"),
 	df_eco2: document.querySelector("#dataFrame2_eco"),
@@ -159,6 +164,8 @@ let bool_ecoDataFrame_State = {
 	df_eco11: false,
 	df_eco12: false,
 };
+
+// [데이터 프레임 보기] 버튼을 클릭하면 보여주는 토글 버튼 + fade 효과 애니메이션
 const click_ecoDataFrame = (key) => {
 	if (!bool_ecoDataFrame_State[key]) {
 		document.querySelector(`${eco_btnMap[key]} > show`).innerText = "데이터 프레임 닫기";
@@ -177,7 +184,7 @@ const click_ecoDataFrame = (key) => {
 	}
 };
 
-// 친환경 자동차 데이터 프레임 버튼의 hover
+// 친환경 자동차 데이터 프레임 버튼의 hover 효과
 const eco_btnIds = [
 	"df_eco1_btn",
 	"df_eco2_btn",
@@ -193,7 +200,7 @@ const eco_btnIds = [
 	"df_eco12_btn",
 ];
 eco_btnIds.forEach((btnId) => {
-	const btn = document.querySelector(`#${btnId}`); // 데이터 프레임 보기 버튼
+	const btn = document.querySelector(`#${btnId}`); // [데이터 프레임 보기] 버튼
 	btn.addEventListener("mouseover", function () {
 		document.querySelector(`#${btnId} > show`).style.color = "black";
 		document.querySelector(`#${btnId} > show`).style.fontWeight = "bolder";
