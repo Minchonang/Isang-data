@@ -10,7 +10,7 @@ const env = document.querySelector("#tab_env");
 const ecoCar_graph = document.querySelector("#ecoCar_graph");
 const env_graph = document.querySelector("#env_graph");
 const comment = document.querySelector("#comment");
-const iframes = document.getElementsByTagName('iframe');
+const desc = document.querySelector("description");
 
 // 친환경 자동차 탭
 const selectEco = () => {
@@ -19,6 +19,7 @@ const selectEco = () => {
    ecoCar_graph.classList.replace(HIDDEN, SHOW);
    env_graph.classList.replace(SHOW, HIDDEN);
    comment.classList.replace(HIDDEN, "comment_area");
+   desc.classList.replace(HIDDEN, "desc");
 };
 
 // 자동차 추천 탭
@@ -28,10 +29,7 @@ const selectEnv = () => {
    env_graph.classList.replace(HIDDEN, SHOW);
    ecoCar_graph.classList.replace(SHOW, HIDDEN);
    comment.classList.replace("comment_area", HIDDEN);
-   // 그래프 버그로 <iframe> 새로고침을 실행
-   // for (let i = 0; i < iframes.length; i++) {
-   //    iframes[i].src = iframes[i].src;
-   // }
+   desc.classList.replace("desc", HIDDEN);
 };
 
 

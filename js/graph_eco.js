@@ -6,7 +6,7 @@ const ecoCarData = [
 		title: "수소/전기차 등록대수",
 		iframeSrc: "/html/친환경자동차/그래프_수소전기차_등록대수.html",
 		dfBtnId: "df_eco1_btn",
-		dataFrameSrc: "./html/친환경자동차/데이터프레임_전기수소차_등록대수.html",
+		dataFrameSrc: "./html/친환경자동차/데이터프레임_수소전기차_등록대수.html",
 	},
 	{
 		title: "대기오염",
@@ -27,14 +27,15 @@ const ecoCarData = [
 		dataFrameSrc: "./html/친환경자동차/데이터프레임_친환경_대기오염_관계.html",
 	},
 	{
-		title: "전국 수소차 충전소 위치",
+		title: "전국 수소차 충전소",
 		iframeSrc: "./html/친환경자동차/그래프_수소차_충전소_지도.html",
 		dfBtnId: "df_eco5_btn",
 		dataFrameSrc: null,
 	},
 	{
-		title: "전국 전기차 충전소 위치",
+		title: "전국 전기차 충전소",
 		iframeSrc: "./html/친환경자동차/그래프_전기차_충전소_지도.html",
+		// iframeSrc: "./img/무제.png",
 		dfBtnId: "df_eco6_btn",
 		dataFrameSrc: null,
 	},
@@ -45,10 +46,10 @@ const ecoCarData = [
 		dataFrameSrc: "./html/친환경자동차/데이터프레임_수소전기차_충전_평균가격.html",
 	},
 	{
-		title: "수소/전기차 100km 주행 충전 비용",
-		iframeSrc: "./html/친환경자동차/그래프_전기수소차_100km_충전비용.html",
+		title: "수소/전기차 차종별 100km 주행 충전 비용",
+		iframeSrc: "./html/친환경자동차/그래프_수소전기차_100km_충전비용.html",
 		dfBtnId: "df_eco8_btn",
-		dataFrameSrc: "./html/친환경자동차/데이터프레임_전기수소차_100km_충전비용.html",
+		dataFrameSrc: "./html/친환경자동차/데이터프레임_수소전기차_100km_충전비용.html",
 	},
 	{
 		title: "2023년 12월 수소/전기차 예상 등록대수",
@@ -81,34 +82,32 @@ const ecoCarGraphHTML = ecoCarData
 	.map(
 		(item, index) => `
    <div>
-       <graph>
-		 <div>
-		 <h1>${item.title}</h1>
-               <graph>
-                   <iframe
+		<div>
+			<h1>${item.title}</h1>
+				<graph>
+					<iframe
                        name="${item.title}"
                        src="${item.iframeSrc}"
                        width="100%"
                        height="600"
                        frameborder="0">
-                   </iframe>
-               </graph>
-               <div id="${item.dfBtnId}" 
-               class="show_dataFrame_area" 
-               onclick="click_ecoDataFrame('df_eco${index + 1}')">
-                   <show>데이터 프레임 보기</show>
-               </div>
-               <dataframe id="dataFrame${index + 1}_eco" class="hidden">
-                   <iframe
+					</iframe>
+				</graph>
+				<div id="${item.dfBtnId}" 
+						class="show_dataFrame_area" 
+						onclick="click_ecoDataFrame('df_eco${index + 1}')">
+					<show>데이터 프레임 보기</show>
+				</div>
+				<dataframe id="dataFrame${index + 1}_eco" class="hidden">
+					 <iframe
                        name="전체 발전량"
                        src="${item.dataFrameSrc}"
                        width="100%"
                        height="300"
                        frameborder="0">
-                   </iframe>
-               </dataframe>
-           </div>
-       </graph>
+					 </iframe>
+				</dataframe>
+		 </div>
    </div>
 `
 	)
@@ -162,16 +161,14 @@ let bool_ecoDataFrame_State = {
 };
 const click_ecoDataFrame = (key) => {
 	if (!bool_ecoDataFrame_State[key]) {
-		document.querySelector(`${eco_btnMap[key]} > show`).innerText =
-			"데이터 프레임 닫기";
+		document.querySelector(`${eco_btnMap[key]} > show`).innerText = "데이터 프레임 닫기";
 		df_eco[key].classList.replace(HIDDEN, FADE_IN);
 		setTimeout(function () {
 			df_eco[key].classList.replace(FADE_IN, SHOW);
 		}, 0);
 		bool_ecoDataFrame_State[key] = true;
 	} else if (bool_ecoDataFrame_State[key]) {
-		document.querySelector(`${eco_btnMap[key]} > show`).innerText =
-			"데이터 프레임 보기";
+		document.querySelector(`${eco_btnMap[key]} > show`).innerText = "데이터 프레임 보기";
 		df_eco[key].classList.replace(SHOW, FADE_OUT);
 		setTimeout(function () {
 			df_eco[key].classList.replace(FADE_OUT, HIDDEN);

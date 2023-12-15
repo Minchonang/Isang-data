@@ -18,6 +18,12 @@ body {
    justify-content: center;
    background-color: #f6f9fc;
 }
+h1 {
+   font-weight: bolder;
+}
+h1, h2 {
+   font-family: "NanumSquareNeo-Variable", serif;
+}
 
 .all_area {
    display: flex;

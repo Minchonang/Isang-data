@@ -34,10 +34,12 @@
          <h1>요즘 핫한 키워드</h1>
          <comment>
             <div>
-               <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fa8f094af-6e08-4df8-9b2b-f7f4eaa9e42d%2Ffa6eeec0-7be7-4789-95c5-339b3afb09e9%2FUntitled.png?table=block&id=4b86d943-50de-49ec-8bcd-a2c44a02e424&spaceId=a8f094af-6e08-4df8-9b2b-f7f4eaa9e42d&width=2000&userId=6519112b-50fc-4c6c-b9e6-174d9c3dbad1&cache=v2" alt="noCommentImg" width="500" height="500">
+               <h2>수소차</h2>
+               <img src="./img/수소차_웹크롤링.jpeg" alt="noCommentImg" width="100%" height="100%">
             </div>
             <div>
-               <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fa8f094af-6e08-4df8-9b2b-f7f4eaa9e42d%2F7c7eb0f1-9091-4502-8100-7300ed37fb22%2FUntitled.png?table=block&id=477f3560-95cf-4f39-84a8-b08a2a8f9b1d&spaceId=a8f094af-6e08-4df8-9b2b-f7f4eaa9e42d&width=2000&userId=6519112b-50fc-4c6c-b9e6-174d9c3dbad1&cache=v2" alt="noCommentImg" width="500" height="500">
+               <h2>전기차</h2>
+               <img src="./img/전기차_웹크롤링.jpeg" alt="noCommentImg" width="100%" height="100%">
             </div>
          </comment>
       </div>
@@ -45,16 +47,14 @@
       <div id="ecoCar_graph" class="show">
 
          <!--					데이터 분석-->
-         <description>
+      </div>
+         <description class="desc">
             <h2>[데이터 분석]</h2>
             <ul class="ecoFriendlyCar_desc">
                <li>점진적으로 증가하거나 점진적으로 감소할 것이라는 예상과는 달리 각각의 요소의 변화가 연도에 따라 감소할 때도 증가할 때도 있는 것을 알 수 있었다.</li>
                <li>수질을 결정하는 평가 요인들은 각각 해당 년도에 기후, 주변 환경 변화 등에 영향을 받아 불규칙적으로 변화한다는 것을 예상할 수 있다.</li>
             </ul>
          </description>
-      </div>
-
-      
 
       <!--				친환경 자동차 추천 -->
       <div id="env_graph" class="hidden">
@@ -63,9 +63,10 @@
             <graph>
                <iframe
                      name="자동차 추천"
-                     src="./html/재생에너지/재생에너지_전체_발전량_그래프.html"
+                     class="rmd_eco_car"
+                     src="http://43.202.33.122:8501"
                      width="100%"
-                     height="600"
+                     height="1500px"
                      frameborder="0">
                </iframe>
             </graph>

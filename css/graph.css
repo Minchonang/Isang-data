@@ -27,7 +27,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   margin: 10px 0;
+   margin: 30px 0;
 }
 
 .show_dataFrame_area {
@@ -79,8 +79,17 @@
    display:          flex;
    flex-direction:   column;
    align-items:      center;
-   margin-bottom: 30px;
+   margin-bottom:    30px;
    background-color: rgba(255, 255, 255, 0.54);
+
+   -webkit-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select: none;
+}
+
+iframe:nth-child(6) {
+   height: 1000px;
 }
 
 graph, dataframe {
@@ -93,8 +102,11 @@ sub {
 
 /* 데이터 분석 영역 */
 description {
-   margin: 2% 0 10% 0;
-   width: 95%;
+   margin:           2% 0 10% 0;
+   padding:          1.5% 2.5%;
+   width:            85%;
+   background-color: rgba(182, 224, 237, 0.35);
+   border-radius:    20px;
 }
 
 ul {
@@ -103,6 +115,11 @@ ul {
 
 description ul li, h3 {
    font-family: "Nanum Gothic", serif;
+}
+
+li {
+   list-style-type: square;
+   line-height: 160%;
 }
 
 .ecoFriendlyCar_desc li {
@@ -115,14 +132,18 @@ description ul li, h3 {
    display: flex;
    flex-direction: column;
    align-items: center;
-   margin: 25px 5% 30px 5%;
-   /* background-color: white; */
+   margin: 25px 5% 15% 5%;
    width: 95%;
    height: 30vw;
 }
 comment {
    display: flex;
    flex-direction: row;
+}
+comment div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 /* <show> 태그 */
@@ -136,7 +157,12 @@ show:hover {
 }
 
 /* 충전소 지도 -> 데이터프레임 없음 */
-#df_eco5_btn, 
+#df_eco5_btn,
 #df_eco6_btn {
    display: none;
+}
+
+/* 친환경 자동차 추천 iframe */
+.rmd_eco_car {
+   height: 1000px;
 }
