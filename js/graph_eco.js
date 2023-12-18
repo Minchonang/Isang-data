@@ -40,7 +40,7 @@ const ecoCarData = [
 		dataFrameSrc: null,
 	},
 	{
-		title: "수소/전기차 전비",
+		title: "수소/전기차 100km당 충전 비용",
 		iframeSrc: "./html/친환경자동차/그래프_수소전기차_충전_평균가격.html",
 		dfBtnId: "df_eco7_btn",
 		dataFrameSrc:
