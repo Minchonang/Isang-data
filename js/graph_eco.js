@@ -4,9 +4,9 @@
 const ecoCarData = [
 	{
 		title: "수소/전기차 등록대수",
-		iframeSrc: "/html/친환경자동차/그래프_수소전기차_등록대수.html",
+		iframeSrc: "./html/친환경자동차/그래프_수소전기차_등록대수.html",
 		dfBtnId: "df_eco1_btn",
-		dataFrameSrc: "./html/친환경자동차/데이터프레임_수소전기차_등록대수.html",
+		dataFrameSrc: "./html/친환경자동차/데이터프레임_수소전기차_등록대수.html",
 	},
 	{
 		title: "대기오염",
@@ -16,46 +16,48 @@ const ecoCarData = [
 	},
 	{
 		title: "친환경 자동차와 대기오염 - 일산화탄소(CO)",
-		iframeSrc: "./html/친환경자동차/그래프_일산화질소.html",
+		iframeSrc: "./html/친환경자동차/그래프_일산화탄소.html",
 		dfBtnId: "df_eco3_btn",
-		dataFrameSrc: "./html/친환경자동차/데이터프레임_친환경_대기오염_관계.html",
+		dataFrameSrc: "./html/친환경자동차/데이터프레임_친환경_대기오염_관계.html",
 	},
 	{
 		title: "친환경 자동차와 대기오염 - 이산화질소(NO<sub>2</sub>)",
-		iframeSrc: "./html/친환경자동차/그래프_일산화질소.html",
+		iframeSrc: "./html/친환경자동차/그래프_일산화질소.html",
 		dfBtnId: "df_eco4_btn",
-		dataFrameSrc: "./html/친환경자동차/데이터프레임_친환경_대기오염_관계.html",
+		dataFrameSrc: "./html/친환경자동차/데이터프레임_친환경_대기오염_관계.html",
 	},
 	{
 		title: "전국 수소차 충전소",
-		iframeSrc: "./html/친환경자동차/그래프_수소차_충전소_지도.html",
+		iframeSrc: "./html/친환경자동차/그래프_수소차_충전소_지도.html",
 		dfBtnId: "df_eco5_btn",
 		dataFrameSrc: null,
 	},
 	{
 		title: "전국 전기차 충전소",
-		iframeSrc: "./html/친환경자동차/그래프_전기차_충전소_지도.html",
+		iframeSrc: "./html/친환경자동차/그래프_전기차_충전소_지도.html",
 		// iframeSrc: "./img/무제.png",
 		dfBtnId: "df_eco6_btn",
 		dataFrameSrc: null,
 	},
 	{
 		title: "수소/전기차 전비",
-		iframeSrc: "./html/친환경자동차/그래프_수소전기차_충전_평균가격.html",
+		iframeSrc: "./html/친환경자동차/그래프_수소전기차_충전_평균가격.html",
 		dfBtnId: "df_eco7_btn",
-		dataFrameSrc: "./html/친환경자동차/데이터프레임_수소전기차_충전_평균가격.html",
+		dataFrameSrc:
+			"./html/친환경자동차/데이터프레임_수소전기차_충전_평균가격.html",
 	},
 	{
 		title: "수소/전기차 차종별 100km 주행 충전 비용",
-		iframeSrc: "./html/친환경자동차/그래프_수소전기차_100km_충전비용.html",
+		iframeSrc: "./html/친환경자동차/그래프_수소전기차_100km_충전비용.html",
 		dfBtnId: "df_eco8_btn",
-		dataFrameSrc: "./html/친환경자동차/데이터프레임_수소전기차_100km_충전비용.html",
+		dataFrameSrc:
+			"./html/친환경자동차/데이터프레임_수소전기차_100km_충전비용.html",
 	},
 	{
 		title: "2023년 12월 수소/전기차 예상 등록대수",
-		iframeSrc: "./html/친환경자동차/그래프_2023년_12월_등록대수.html",
+		iframeSrc: "./html/친환경자동차/그래프_2023년_12월_등록대수.html",
 		dfBtnId: "df_eco9_btn",
-		dataFrameSrc: "./html/친환경자동차/데이터프레임_2023년_12월_등록대수.html",
+		dataFrameSrc: "./html/친환경자동차/데이터프레임_2023년_12월_등록대수.html",
 	},
 	{
 		title: "수소차 연도별 보조금",
@@ -71,9 +73,10 @@ const ecoCarData = [
 	},
 	{
 		title: "4년간 수소/전기차 보조금",
-		iframeSrc: "./html/친환경자동차/그래프_수소전기차_연간_보조금_비교.html",
+		iframeSrc: "./html/친환경자동차/그래프_수소전기차_연간_보조금_비교.html",
 		dfBtnId: "df_eco12_btn",
-		dataFrameSrc: "./html/친환경자동차/데이터프레임_수소전기차_연간_보조금_비교.html",
+		dataFrameSrc:
+			"./html/친환경자동차/데이터프레임_수소전기차_연간_보조금_비교.html",
 	},
 ];
 
@@ -168,14 +171,16 @@ let bool_ecoDataFrame_State = {
 // [데이터 프레임 보기] 버튼을 클릭하면 보여주는 토글 버튼 + fade 효과 애니메이션
 const click_ecoDataFrame = (key) => {
 	if (!bool_ecoDataFrame_State[key]) {
-		document.querySelector(`${eco_btnMap[key]} > show`).innerText = "데이터 프레임 닫기";
+		document.querySelector(`${eco_btnMap[key]} > show`).innerText =
+			"데이터 프레임 닫기";
 		df_eco[key].classList.replace(HIDDEN, FADE_IN);
 		setTimeout(function () {
 			df_eco[key].classList.replace(FADE_IN, SHOW);
 		}, 0);
 		bool_ecoDataFrame_State[key] = true;
 	} else if (bool_ecoDataFrame_State[key]) {
-		document.querySelector(`${eco_btnMap[key]} > show`).innerText = "데이터 프레임 보기";
+		document.querySelector(`${eco_btnMap[key]} > show`).innerText =
+			"데이터 프레임 보기";
 		df_eco[key].classList.replace(SHOW, FADE_OUT);
 		setTimeout(function () {
 			df_eco[key].classList.replace(FADE_OUT, HIDDEN);
