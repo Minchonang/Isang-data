@@ -9,10 +9,10 @@ const ecoCarData = [
 		dataFrameSrc: "./html/친환경자동차/데이터프레임_수소전기차_등록대수.html",
 	},
 	{
-		title: "대기오염",
-		iframeSrc: "./html/친환경자동차/그래프_대기오염.html",
+		title: "전국 대기 오염 지수",
+		iframeSrc: "./html/친환경자동차/그래프_전국대기오염지수.html",
 		dfBtnId: "df_eco2_btn",
-		dataFrameSrc: "./html/친환경자동차/데이터프레임_대기오염.html",
+		dataFrameSrc: "./html/친환경자동차/데이터프레임_전국대기오염지수.html",
 	},
 	{
 		title: "친환경 자동차와 대기오염 - 일산화탄소(CO)",
